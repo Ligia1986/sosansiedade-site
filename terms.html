@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <title>Termos & Condições – SOS Ansiedade</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="/">Início</a>
+    <a href="/privacy.html">Política de Privacidade</a>
+    <a href="/terms.html" class="active">Termos & Condições</a>
+  </nav>
+  <div class="container">
+    <h1>Termos & Condições</h1>
+    <p><em>Última atualização: <span id="d"></span></em></p>
+
+    <h2>Uso da App</h2>
+    <p>A app destina-se a bem-estar e não substitui aconselhamento médico.</p>
+    <h2>Subscrição Premium</h2>
+    <p>Pagamentos e gestão via loja (Google/Apple). Renovação automática, podes cancelar a qualquer momento nas definições da loja.</p>
+    <h2>Limitação de Responsabilidade</h2>
+    <p>Não nos responsabilizamos por danos resultantes de uso incorreto da app.</p>
+    <h2>Contacto</h2>
+    <p><a href="mailto:legal@sosansiedade.com">legal@sosansiedade.com</a></p>
+
+    <div class="footer">© <span id="y"></span> SOS Ansiedade</div>
+  </div>
+  <script>
+    const now=new Date();
+    document.getElementById('y').textContent=now.getFullYear();
+    document.getElementById('d').textContent=now.toISOString().slice(0,10);
+  </script>
+</body>
+</html>
