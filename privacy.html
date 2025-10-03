@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <title>Política de Privacidade – SOS Ansiedade</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav">
+    <a href="/">Início</a>
+    <a href="/privacy.html" class="active">Política de Privacidade</a>
+    <a href="/terms.html">Termos & Condições</a>
+  </nav>
+  <div class="container">
+    <h1>Política de Privacidade</h1>
+    <p><em>Última atualização: <span id="d"></span></em></p>
+
+    <p>Respeitamos a tua privacidade. Esta política explica que dados recolhemos, porquê e como os tratamos.</p>
+    <h2>Dados que recolhemos</h2>
+    <ul>
+      <li>Dados de utilização anónimos para melhorar a app.</li>
+      <li>Informações fornecidas por ti, como favoritos/definições.</li>
+    </ul>
+    <h2>Como usamos os dados</h2>
+    <p>Para prestar o serviço, melhorar funcionalidades e suporte.</p>
+    <h2>Retenção & direitos</h2>
+    <p>Podes solicitar acesso, correção ou eliminação: <a href="mailto:privacidade@sosansiedade.com">privacidade@sosansiedade.com</a>.</p>
+    <h2>Contactos</h2>
+    <p>DPO/Contacto: <a href="mailto:privacidade@sosansiedade.com">privacidade@sosansiedade.com</a></p>
+
+    <div class="footer">© <span id="y"></span> SOS Ansiedade</div>
+  </div>
+  <script>
+    const now=new Date();
+    document.getElementById('y').textContent=now.getFullYear();
+    document.getElementById('d').textContent=now.toISOString().slice(0,10);
+  </script>
+</body>
+</html>
