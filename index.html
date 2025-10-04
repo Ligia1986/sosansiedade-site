@@ -10,27 +10,32 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sosansiedade.com/">
 
-  <!-- cache-busting para garantir que não ficas com CSS antigo -->
-  <link rel="stylesheet" href="./styles.css?v=5">
+  <link rel="stylesheet" href="./styles.css?v=6">
   <link rel="icon" href="./favicon.png">
 
-  <!-- Forçar tamanho e cantos arredondados do logo aqui mesmo -->
+  <!-- Overrides para ícone grande + texto sem cortar -->
   <style>
     .hero {
-      display: flex; align-items: center; gap: 24px; padding: 40px 0;
+      display: flex; align-items: center; gap: 28px; padding: 44px 0;
+      flex-wrap: wrap; /* permite partir linha se faltar espaço */
     }
     .app-icon {
-      width: 180px !important;
-      height: 180px !important;
-      border-radius: 28px !important;    /* cantos tipo app */
-      box-shadow: 0 10px 28px rgba(0,0,0,0.18);
-      display: block;
-      object-fit: cover;                  /* cobre a moldura sem distorcer */
-      background: #fff;                   /* se a imagem tiver transparência */
+      width: 220px; height: 220px; border-radius: 28px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.18);
+      display: block; object-fit: cover; background: #fff;
+      flex: 0 0 auto; /* não encolhe */
     }
-    @media (max-width: 640px) {
-      .hero { flex-direction: column; text-align: center; }
-      .app-icon { width: 140px !important; height: 140px !important; border-radius: 22px !important; }
+    .hero-text {
+      flex: 1 1 320px; min-width: 0; /* deixa o texto ocupar o resto sem forçar corte */
+    }
+    .hero-text h1 {
+      margin: 0 0 8px; line-height: 1.1;
+      word-break: break-word; overflow-wrap: anywhere; white-space: normal;
+    }
+    .hero-text p { margin: 0 0 12px; }
+    @media (max-width: 800px) {
+      .hero { flex-direction: column; text-align: center; gap: 20px; }
+      .app-icon { width: 180px; height: 180px; border-radius: 24px; }
     }
   </style>
 </head>
@@ -44,8 +49,8 @@
   <div class="container">
     <section class="hero">
       <!-- logo.png dentro de assets7 -->
-      <img class="app-icon" src="./assets7/logo.png?v=3" alt="Logo SOS Ansiedade">
-      <div>
+      <img class="app-icon" src="./assets7/logo.png?v=4" alt="Logo SOS Ansiedade">
+      <div class="hero-text">
         <h1>SOS Ansiedade</h1>
         <p>Ferramentas simples e eficazes para te ajudar a respirar, recentrar e reduzir a ansiedade — em qualquer lugar.</p>
         <div class="cta">
@@ -75,6 +80,8 @@
     </div>
   </div>
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
