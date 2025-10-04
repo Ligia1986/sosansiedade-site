@@ -9,19 +9,24 @@
   <meta property="og:description" content="Técnicas rápidas, áudio-guias e ferramentas para acalmar a ansiedade.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sosansiedade.com/">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="favicon.png">
+
+  <!-- caminhos RELATIVOS para funcionar em GitHub Pages -->
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="./favicon.png">
+  <!-- Se tiveres .nojekyll na raiz, o Pages não tenta compilar Jekyll -->
 </head>
 <body>
   <nav class="nav">
-    <a href="/" class="active">Início</a>
-    <a href="/privacy.html">Política de Privacidade</a>
-    <a href="/terms.html">Termos & Condições</a>
+    <a href="./" class="active">Início</a>
+    <a href="./privacy.html">Política de Privacidade</a>
+    <a href="./terms.html">Termos & Condições</a>
   </nav>
 
   <div class="container">
     <section class="hero">
-      <img src="logo_splash.png" alt="Logo SOS Ansiedade" width="120" height="120">
+      <!-- Usa a tua pasta assets7 -->
+      <img src="./assets7/logo.svg" alt="Logo SOS Ansiedade" width="120" height="120">
+      <!-- Se o teu ficheiro for PNG, troca por: ./assets7/logo.png -->
       <div>
         <h1>SOS Ansiedade</h1>
         <p>Ferramentas simples e eficazes para te ajudar a respirar, recentrar e reduzir a ansiedade — em qualquer lugar.</p>
@@ -30,7 +35,9 @@
           <a class="btn primary" href="#">Instalar no Android</a>
           <a class="btn" href="#">Instalar no iOS</a>
         </div>
-        <p style="margin:8px 0;color:#6b6b6b;font-size:14px">Precisas de ajuda? <a href="mailto:suporte@sosansiedade.com">suporte@sosansiedade.com</a></p>
+        <p style="margin:8px 0;color:#6b6b6b;font-size:14px">
+          Precisas de ajuda? <a href="mailto:suporte@sosansiedade.com">suporte@sosansiedade.com</a>
+        </p>
       </div>
     </section>
 
@@ -45,10 +52,15 @@
     </main>
 
     <div class="footer">
-      © <span id="y"></span> SOS Ansiedade · <a href="/privacy.html">Privacidade</a> · <a href="/terms.html">Termos</a>
+      © <span id="y"></span> SOS Ansiedade ·
+      <a href="./privacy.html">Privacidade</a> ·
+      <a href="./terms.html">Termos</a>
     </div>
   </div>
 
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
